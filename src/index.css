@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensure no horizontal scrollbar */
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+button {
+  transition: transform 0.1s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.vertical-progress-bar-container {
+  position: fixed;
+  top: 0;
+  right: 0; /* Move progress bar to the right side */
+  width: 8px; /* Width of the vertical progress bar */
+  height: 100%;
+  background: transparent;
+  z-index: 1000;
+}
+
+.vertical-progress-bar {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(12, 234, 4) 0%, rgb(6, 211, 115) 100%);
+  box-shadow: 0 0 10px rgba(58, 200, 207, 0.7), 0 0 10px rgba(13, 194, 145, 0.7);
+  height: 0; /* Start with 0 height and expand with JavaScript */
+  border-radius: 10px;
+  transition: height 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(0);
+    opacity: 0.6; /* Start with some opacity */
+  }
+  to {
+    transform: scale(4); /* Adjust scale as needed */
+    opacity: 1; /* Fade out */
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.6); /* Adjust color for the ripple */
+  pointer-events: none;
+  transform: scale(0); /* Start scale */
+  animation: ripple-animation 0.6s linear; /* Match duration with your ripple animation */
+}
+/* Add these styles to your CSS file */
+
+.progress-bar-background {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0; /* Light gray background */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-running {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 140, 255, 0.5) 25%,
+    rgba(0, 200, 255, 0.5) 50%,
+    rgba(0, 140, 255, 0.5) 75%
+  );
+  background-size: 200% 100%;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
