@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h2 className="text-2xl font-bold">BSNSI</h2>
           <p className="mt-2 text-gray-400">
-            Your Trusted Business Solutions Partner
+            Your Trusted Business Solutions Partners
           </p>
         </div>
 

@@ -32,8 +32,8 @@ button {
 
 .vertical-progress-bar {
   width: 100%;
-  background: linear-gradient(90deg, rgb(12, 234, 4) 0%, rgb(6, 211, 115) 100%);
-  box-shadow: 0 0 10px rgba(58, 200, 207, 0.7), 0 0 10px rgba(13, 194, 145, 0.7);
+  background: linear-gradient(90deg, rgb(7, 235, 247) 0%, rgb(7, 233, 210) 100%);
+  box-shadow: 0 0 10px rgba(5, 220, 231, 0.7), 0 0 10px rgba(8, 207, 222, 0.7);
   height: 0; /* Start with 0 height and expand with JavaScript */
   border-radius: 10px;
   transition: height 0.6s ease-out;
